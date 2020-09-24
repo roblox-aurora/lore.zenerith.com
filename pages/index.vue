@@ -1,61 +1,39 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">Zenerith Lore</h1>
-      <div class="links">
-        <a href="/wiki" rel="noopener noreferrer" class="button--grey">
-          Wiki
-        </a>
+  <article>
+    <h1 v-if="article.title" class="title">{{ article.title }}</h1>
+    <div class="slug">{{ slug }}</div>
+
+    <div :class="{ 'two-column': article.sidebar !== undefined }">
+      <div v-if="article.sidebar" class="sidebar">
+        <pane class="muddy-slate">
+          <div v-for="(link, id) in article.sidebar" :key="link">
+            <nuxt-link :to="`${slug}${link}`">{{ id }}</nuxt-link>
+          </div>
+        </pane>
       </div>
-      <div
-        v-for="article in articles"
-        :class="'link-' + article.slug"
-        :key="article.slug"
-      ></div>
+      <div class="content">
+        <nuxt-content :document="article" />
+      </div>
     </div>
-  </div>
+  </article>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 
 export default Vue.extend({
-  fetch({ redirect }) {
-    redirect(301, '/wiki')
+  async asyncData({ $content, params }) {
+    const article = await $content('index').fetch()
+
+    return { article, slug: `/${params.slug ?? ''}` }
   },
 })
 </script>
 
-<style>
-/* .container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang="scss">
+.container {
+  max-width: 1500px;
+  margin: 15px auto;
+  color: white;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-} */
 </style>

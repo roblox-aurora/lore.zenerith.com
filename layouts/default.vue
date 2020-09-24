@@ -63,32 +63,44 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+article {
+  max-width: 1500px;
+  margin: 15px auto;
+  color: white;
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  .slug {
+    margin: 10px;
+  }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  .two-column {
+    display: grid;
+    grid-template-columns: 20% 80%;
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+    column-gap: 10px;
+
+    .sidebar {
+      .pane {
+        padding: 10px;
+      }
+
+      a {
+        color: #f8f8f8;
+        text-decoration: none;
+        font-size: 20px;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 25px;
+
+    &.title {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    padding: 5px;
+  }
 }
 </style>

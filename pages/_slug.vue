@@ -23,50 +23,7 @@ export default {
   async asyncData({ $content, params }) {
     const article = await $content(params.slug ?? 'index').fetch()
 
-    return { article, slug: `/wiki/${params.slug ?? ''}` }
+    return { article, slug: `/${params.slug ?? ''}` }
   },
 }
 </script>
-
-<style lang="scss">
-article {
-  max-width: 1500px;
-  margin: 15px auto;
-  color: white;
-
-  .slug {
-    margin: 10px;
-  }
-
-  .two-column {
-    display: grid;
-    grid-template-columns: 20% 80%;
-
-    column-gap: 10px;
-
-    .sidebar {
-      .pane {
-        padding: 10px;
-      }
-
-      a {
-        color: #f8f8f8;
-        text-decoration: none;
-        font-size: 20px;
-      }
-    }
-  }
-
-  h1 {
-    font-size: 25px;
-
-    &.title {
-      font-size: 30px;
-    }
-  }
-
-  p {
-    padding: 5px;
-  }
-}
-</style>
