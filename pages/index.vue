@@ -18,18 +18,11 @@
 </template>
 
 <script lang="ts">
-import { Context } from '@nuxt/types'
-import type { $content } from '@nuxt/content'
 import Vue from 'vue'
 
 export default Vue.extend({
-  mounted() {
-    console.log(this.$content().fetch())
-  },
-  async asyncData(context: Context & { $content: typeof $content }) {
-    const articles = await context.$content().fetch()
-
-    return { articles }
+  fetch({ redirect }) {
+    redirect(301, '/wiki')
   },
 })
 </script>
