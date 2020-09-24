@@ -30,7 +30,15 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/fontawesome',
   ],
+
+  fontawesome: {
+    icons: {
+      brands: ['faGithub'],
+      solid: ['faPencilAlt'],
+    },
+  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: ['@nuxt/content'],

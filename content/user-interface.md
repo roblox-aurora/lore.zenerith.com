@@ -2,6 +2,7 @@
 title: The User Interface
 sidebar:
   Home: /
+showInSidebar: true
 ---
 
 # Unit Frames

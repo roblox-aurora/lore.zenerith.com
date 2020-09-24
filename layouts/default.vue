@@ -42,6 +42,8 @@ header {
   background-image: url('~assets/muddyslate.jpg');
   border: 1px solid #51473d;
   padding-top: 5px;
+  margin: 10px;
+  border-radius: 5px;
 
   .header-center {
     margin: 0 auto;
@@ -138,9 +140,13 @@ article {
       }
 
       a {
-        color: #f8f8f8;
+        color: #b0b0b0;
         text-decoration: none;
         font-size: 20px;
+
+        &.nuxt-link-exact-active {
+          color: #f8f8f8;
+        }
       }
     }
   }

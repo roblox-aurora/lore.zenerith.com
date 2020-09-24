@@ -1,8 +1,9 @@
 ---
 title: Zenerith Lore Wiki
-sidebar:
-  Home: /
-  User Interface: /user-interface
+showInSidebar: true
+# sidebar:
+#   Home: /
+#   User Interface: /user-interface
 ---
 
 # Welcome to the Wiki!
