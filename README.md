@@ -1,0 +1,3 @@
+# Zenerith Lore
+
+## Contributing

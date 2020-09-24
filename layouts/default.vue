@@ -7,11 +7,28 @@
             <img src="~assets/zenerith.png" />
           </nuxt-link>
         </div>
+        <div id="main-nav"></div>
       </div>
     </header>
     <main><Nuxt /></main>
     <footer>
-      <pane class="footer"> </pane>
+      <pane class="footer">
+        <div class="footer-columns">
+          <div></div>
+          <div class="align-right">
+            <p>
+              Site design and logos &copy;
+              <a href="https://vorlias.com">Jonathan Holmes</a>, 2020
+            </p>
+            <p>
+              Contribute on
+              <a href="https://github.com/roblox-aurora/lore.zenerith.com"
+                >GitHub</a
+              >
+            </p>
+          </div>
+        </div>
+      </pane>
     </footer>
   </div>
 </template>
@@ -31,6 +48,11 @@ header {
     max-width: 1500px;
     display: flex;
     justify-content: space-between;
+
+    .logo {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
 
@@ -42,6 +64,26 @@ body {
   margin: 0px;
   padding: 0px;
   background-image: url('~assets/darkslate.jpg');
+}
+
+footer {
+  .footer-columns {
+    color: white;
+
+    a {
+      color: #d8d8d8;
+      text-decoration: none;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    max-width: 1500px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 }
 
 html {
@@ -56,17 +98,29 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+//   margin: 0;
+// }
+
+#main-nav {
+  margin: 8px;
+  display: flex;
 }
 
 article {
   max-width: 1500px;
   margin: 15px auto;
   color: white;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 2px;
+  }
 
   .slug {
     margin: 10px;
@@ -92,11 +146,15 @@ article {
   }
 
   h1 {
-    font-size: 25px;
+    font-size: 30px;
 
     &.title {
       font-size: 30px;
     }
+  }
+
+  h2 {
+    font-size: 22px;
   }
 
   p {
