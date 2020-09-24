@@ -1,7 +1,5 @@
 ---
-title: The User Interface
-sidebar:
-  Home: /
+title: User Interface
 showInSidebar: true
 ---
 

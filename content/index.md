@@ -2,8 +2,7 @@
 title: Zenerith Lore Wiki
 showInSidebar: true
 # sidebar:
-#   Home: /
-#   User Interface: /user-interface
+#   Development Changelog: /changelog
 ---
 
 # Welcome to the Wiki!
@@ -11,3 +10,6 @@ showInSidebar: true
 Welcome to the Zenerithian Lore Database.
 
 This is a work-in-progress website that the community can contribute to.
+
+# Change Log
+The changelog for Zenerith can be found under [Changelog](/changelog).
