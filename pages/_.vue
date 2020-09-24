@@ -30,7 +30,7 @@
         >
           <div v-for="subArticle in siblingArticles" :key="subArticle.slug">
             <nuxt-link
-              :to="`${article.dir !== '/' ? article.dir + '/' : ''}${
+              :to="`${article.dir !== '/' ? article.dir + '/' : '/'}${
                 subArticle.slug
               }`"
               >{{ subArticle.title }}</nuxt-link
