@@ -5,7 +5,7 @@
       <div class="slug">{{ dateUpdated }}</div>
       <div class="github">
         <a
-          :href="`https://github.com/roblox-aurora/lore.zenerith.com/edit/master/content/${article.slug}.md`"
+          :href="`https://github.com/roblox-aurora/lore.zenerith.com/edit/master/content${article.path}.md`"
         >
           <font-awesome-icon :icon="['fas', 'pencil-alt']" size="1x" />
         </a>
@@ -47,9 +47,6 @@
         <nuxt-content :document="article" />
       </div>
     </div>
-    <!-- <pre>
-      {{siblingArticles}}
-      </pre> -->
   </article>
 </template>
 

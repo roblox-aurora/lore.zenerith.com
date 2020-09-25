@@ -153,18 +153,32 @@ article {
 
   h1 {
     font-size: 30px;
+    border-bottom: 1px solid #51473d;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #aa9580;
 
     &.title {
       font-size: 30px;
+
+      background: url('~assets/slate.jpg');
+      padding: 5px;
+      border: #3e3e3e 1px solid;
+      border-radius: 5px;
+
+      color: #e0e0e0;
     }
   }
 
   h2 {
+    color: #aa9580;
     font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   p {
-    padding: 5px;
+    padding-left: 5px;
   }
 }
 </style>
